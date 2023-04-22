@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package semaphore;
+
+option go_package = "/pb";
+
+message Options {
+}

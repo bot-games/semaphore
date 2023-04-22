@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="player" style="width: 1024px; height: 1024px"></div>
+<script>
+    function player(p) {
+        new p.Player(window.document.getElementById('player'), {
+                "ts": "2023-04-22T13:15:20Z",
+                "participants": [
+                    {
+                        "user": {
+                            "id": 1,
+                            "name": "User 1"
+                        }
+                    },
+                    {
+                        "user": {
+                            "id": 2,
+                            "name": "User 2"
+                        }
+                    }
+                ],
+                "winner": 2,
+                "options": "",
+                "ticks": [{
+                    "tick": 0,
+                    "state": "CgwAAAAAAAAAAAAAAAAQAQ==",
+                    "actions": [{"data": "CAMQAg==", "user": 2}]
+                }, {"tick": 1, "state": "CgwAAAAAAAAAAAAAAAE=", "actions": [{"data": "CAIQAQ==", "user": 1}]}, {
+                    "tick": 2,
+                    "state": "CgwAAAAAAAABAAAAAAEQAQ==",
+                    "actions": [{"data": "", "user": 2}]
+                }, {"tick": 3, "state": "CgwBAAAAAAABAAAAAAE=", "actions": [{"data": "CAEQAg==", "user": 1}]}, {
+                    "tick": 4,
+                    "state": "CgwBAAAAAAABAAABAAEQAQ==",
+                    "actions": [{"data": "CAI=", "user": 2}]
+                }, {"tick": 5, "state": "CgwBAAEAAAABAAABAAE=", "actions": [{"data": "CAIQAQ==", "user": 1}]}, {
+                    "tick": 6,
+                    "state": "CgwBAAEAAAACAAABAAEQAQ==",
+                    "actions": [{"data": "EAI=", "user": 2}]
+                }, {"tick": 7, "state": "CgwBAAEAAAACAAEBAAE=", "actions": [{"data": "CAI=", "user": 1}]}, {
+                    "tick": 8,
+                    "state": "CgwBAAIAAAACAAEBAAEQAQ==",
+                    "actions": [{"data": "CAEQAg==", "user": 2}]
+                }, {"tick": 9, "state": "CgwBAAIAAAACAAECAAE=", "actions": [{"data": "CAMQAg==", "user": 1}]}, {
+                    "tick": 10,
+                    "state": "CgwBAAIAAAACAAECAAIQAQ==",
+                    "actions": [{"data": "CAMQAQ==", "user": 2}]
+                }, {"tick": 11, "state": "CgwBAAIAAAACAQECAAI=", "actions": [{"data": "CAEQAQ==", "user": 1}]}, {
+                    "tick": 12,
+                    "state": "CgwBAAIAAAECAQECAAIQAQ==",
+                    "actions": [{"data": "CAEQAg==", "user": 2}]
+                }, {"tick": 13, "state": "CgwBAAIAAAECAQEDAAI=", "actions": [{"data": "CAE=", "user": 1}]}, {
+                    "tick": 14,
+                    "state": "CgwBAQIAAAECAQEDAAIQAQ==",
+                    "actions": [{"data": "CAE=", "user": 2}]
+                }, {"tick": 15, "state": "CgwBAgIAAAECAQEDAAIQAQ==", "actions": null}]
+            }
+        )
+    }
+</script>
+<script type="module" src="/bundle.js"></script>
+</body>
+</html>
