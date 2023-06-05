@@ -12,13 +12,13 @@ import (
 
 type Semaphore struct{}
 
-func (s Semaphore) Init() (proto.Message, proto.Message, uint8) {
+func (s Semaphore) Init() (proto.Message, proto.Message, uint8, any) {
 	state := &pb.State{
 		Field:   make([]pb.Cell, 12),
 		CurUser: uint32(rand.Int31n(2)),
 	}
 
-	return &pb.Options{}, state, uint8(1 << state.CurUser)
+	return &pb.Options{}, state, uint8(1 << state.CurUser), nil
 }
 
 func (s Semaphore) DecodeState(data []byte) (proto.Message, error) {
